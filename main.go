@@ -5,11 +5,13 @@ import (
 	"gobackend/router"
 	"log"
 	"net/http"
+	"os"
 )
 
 func main() {
 	r := router.Router()
-	fmt.Println("Starting server on the port 8082...")
+	port := os.Getenv("PORT")
+	fmt.Println("Starting server on the port...")
 
-	log.Fatal(http.ListenAndServe(":8082", r))
+	log.Fatal(http.ListenAndServe(port, r))
 }

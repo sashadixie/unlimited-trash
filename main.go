@@ -11,7 +11,7 @@ import (
 func main() {
 	r := router.Router()
 	port := os.Getenv("PORT")
-	fmt.Println("Starting server on the port..." + port)
+	fmt.Println("Port from os..." + port)
 	if port == "" {
 		port = "9000"
 	}
